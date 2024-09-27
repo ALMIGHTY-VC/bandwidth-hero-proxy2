@@ -20,6 +20,10 @@ on:
   schedule:
     - cron: '29 22 * * 5'
 
+permissions:
+  contents: read  # Allows access to repository content
+  security-events: write  # Allows writing to security events, necessary for CodeQL
+
 jobs:
   analyze:
     name: Analyze
